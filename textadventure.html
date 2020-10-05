@@ -56,6 +56,7 @@
             font-size: 16px;
             margin: 10px;
         }
+
     </style>
     <body>
         
@@ -82,13 +83,32 @@
         </div>
         <div id="right_pane">
         <div id="story_text">
-            <p>Welcome to the Ice cream Shop</p>
-            <p>It is the year 2020</p>
+            <p id="p1">Welcome to the Ice cream Shop</p>
+            <p id="p2">It is the year 2020</p>
         </div>
         <div id="button_choices"></div>
 
-            <a class="buttons" href="">Yes</a>
-            <a class="buttons" href="">No</a>
+            <a id="b1" class= "buttons" href="" onclick="bclick(1)">Yes</a>
+            <a id="b2" class="buttons" href="" onclick="bclick(2)">No</a>
     </div>
+
+
+    <script>
+        var b1 = document.getElementById("b1");
+        var b2 = document.getElementById("b2");
+        var image = document.getElementById("story_img");
+        var p1 = document.getElementById("p1");
+        var p2 = document.getElementById("p2");
+        var state = "intro";
+        intro();
+
+        function intro(){
+            img.src = "images/me.jpg.JPG";
+            b1.innerHTML = "stay in school";
+            b2.innerHTML = "Go to camp";
+            p1.innerHTML = "Welcome to my Adventure";
+            p2.innerHTML = "Would you like to stay in school or go to camp";
+        }
+    </script>
     </body>
 </html>
