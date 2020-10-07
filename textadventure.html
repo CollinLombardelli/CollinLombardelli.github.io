@@ -88,8 +88,8 @@
         </div>
         <div id="button_choices"></div>
 
-            <a id="b1" class= "buttons" href="" onclick="bclick(1)">Yes</a>
-            <a id="b2" class="buttons" href="" onclick="bclick(2)">No</a>
+            <a id="b1" class="buttons" href="#" onclick="bclick(1)">Yes</a>
+            <a id="b2" class="buttons" href="#" onclick="bclick(2)">No</a>
     </div>
 
 
@@ -116,6 +116,15 @@
              p2.innerHTML = "Meet other kids at the academy";
              b1.innerHTML = "Yes";
              b2.innerHTML = "No";
+
+        }
+
+        function escape(){
+             img.src="images/cute_cat.jpg"
+             p1.innerHTML = "Begin training for powers";
+             p2.innerHTML = "Meet other kids at the academy";
+             b1.innerHTML = "Yes";
+             b2.innerHTML = "No";
         }
 
 
@@ -130,6 +139,15 @@
                     goToCamp();
                     state = "goToCamp"
                 }
+            }
+            else if(state == "stayinschool"){
+                if (button == 1){
+                    escape();
+                    state = "escape"
+                }
+            else if(button == 2){
+                    intensetraining();
+                    state = "intensetraining"
             }
                 
         }
