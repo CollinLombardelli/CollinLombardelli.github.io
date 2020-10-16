@@ -25,8 +25,8 @@
         #right_pane{
             background-color: blue;
             height: 100%;
-            width: 44%
-            float: right;
+            width: 44%;
+            float: left;
         }
 
         #story_text{
@@ -51,7 +51,7 @@
             text-decoration: none;
             color: white;
             background-color: black;
-            padding: 10px
+            padding: 10px;
             border-radius: 8px;
             font-size: 16px;
             margin: 10px;
@@ -86,21 +86,22 @@
             <p id="p1">Welcome to the Ice cream Shop</p>
             <p id="p2">It is the year 2020</p>
         </div>
-        <div id="button_choices"></div>
+        <div id="button_choices">
 
             <a id="b1" class="buttons" href="#" onclick="bclick(1)">Yes</a>
             <a id="b2" class="buttons" href="#" onclick="bclick(2)">No</a>
+        </div>
     </div>
 
 
     <script>
         var b1 = document.getElementById("b1");
         var b2 = document.getElementById("b2");
-        var image = document.getElementById("story_img");
+        var img = document.getElementById("story_img");
         var p1 = document.getElementById("p1");
         var p2 = document.getElementById("p2");
-        //var state = "intro";
-        //intro();
+        var state = "intro";
+        intro();
 
         function intro(){
             img.src = "images/me.jpg.JPG";
@@ -120,9 +121,17 @@
         }
 
         function escape(){
-             img.src="images/cute_cat.jpg"
-             p1.innerHTML = "Begin training for powers";
-             p2.innerHTML = "Meet other kids at the academy";
+             img.src="images/cute_cat.jpg";
+             p1.innerHTML = "Soccer";
+             p2.innerHTML = "Leave";
+             b1.innerHTML = "Yes";
+             b2.innerHTML = "No";
+        }
+        
+        function goToCamp(){
+             img.src="images/cute_cat.jpg";
+             p1.innerHTML = "Soccer";
+             p2.innerHTML = "Work hard";
              b1.innerHTML = "Yes";
              b2.innerHTML = "No";
         }
@@ -132,26 +141,24 @@
         function bclick(button){
             if (state == "intro"){
                 if(button == 1){
-                    stayinschool();
+                    stayInSchool();
                     state="stayInSchool"
                 }
-                else if(button == 2){
+            else if(state == "intro"){
+                if (button == 2)
                     goToCamp();
                     state = "goToCamp"
                 }
             }
-            else if(state == "stayinschool"){
+            else if(state == "stayInSchool"){   
                 if (button == 1){
                     escape();
                     state = "escape"
                 }
-            else if(button == 2){
-                    intensetraining();
-                    state = "intensetraining"
             }
-                
         }
 
     </script>
+    
     </body>
 </html>
