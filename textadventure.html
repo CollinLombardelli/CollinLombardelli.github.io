@@ -14,7 +14,7 @@
             background-color: red;
         }
         #left_pane{
-            background-color: green;
+            background-color: white;
             height: 100%;
             width: 56%;
             float: left;
@@ -30,7 +30,7 @@
         }
 
         #story_text{
-            background-color: yellow;
+            background-color: blue;
             height: 80%
         }
 
@@ -104,34 +104,66 @@
         intro();
 
         function intro(){
-            img.src = "images/me.jpg.JPG";
-            b1.innerHTML = "stay in school";
-            b2.innerHTML = "Go to camp";
-            p1.innerHTML = "Welcome to my Adventure";
-            p2.innerHTML = "Would you like to stay in school or go to camp";
+            img.src = "images/VR.jpg";
+            b1.innerHTML = "Yes";
+            b2.innerHTML = "No";
+            p1.innerHTML = "Welcome to my Text Adventure";
+            p2.innerHTML = "Hello and Welcome to Pixel-Land VR  the world of your imagination but you are trapped . Do you choose to cooperate?";
         }
 
-        function stayInSchool(){
-             img.src="images/cat.jpg"
-             p1.innerHTML = "Begin training for powers";
-             p2.innerHTML = "Meet other kids at the academy";
+        function parzival(){
+             img.src="images/scary.jpg"
+             p1.innerHTML = "You are given a quest to escape this dangerous world.";
+             p2.innerHTML = "Do you accept?";
              b1.innerHTML = "Yes";
              b2.innerHTML = "No";
 
         }
 
-        function escape(){
-             img.src="images/cute_cat.jpg";
-             p1.innerHTML = "Soccer";
-             p2.innerHTML = "Leave";
+        function death(){
+             img.src="images/died.jpg";
+             p1.innerHTML = "You died";
+             p2.innerHTML = "";
+             b1.innerHTML = "Yes";
+             b2.innerHTML = "No";
+        }
+
+        function firstKey(){
+             img.src="images/monster.jpg";
+             p1.innerHTML = "You have chosen to advance to the first key and you must collect 2 to escape.";
+             p2.innerHTML = "A monster appears and there is a sword next to you do you pick it up and slay the beast?";
              b1.innerHTML = "Yes";
              b2.innerHTML = "No";
         }
         
-        function goToCamp(){
-             img.src="images/cute_cat.jpg";
-             p1.innerHTML = "Soccer";
-             p2.innerHTML = "Work hard";
+        function killedMonster(){
+             img.src="images/key.jpg";
+             p1.innerHTML = "You slay the beast and as he falls to the ground the first key falls to your feet.";
+             p2.innerHTML = "Do you continue?";
+             b1.innerHTML = "Yes";
+             b2.innerHTML = "No";
+        }
+
+        function lavaHydra(){
+             img.src="images/hydra.jpg";
+             p1.innerHTML = "You travel throughout the land in search of the third key. You are currently in a desert . It starts shaking and the sand sinks into the ground and you are suddenly surrounded by lava and faced with a three-headed lava hydra.";
+             p2.innerHTML = "Do you chose to fight?";
+             b1.innerHTML = "Yes";
+             b2.innerHTML = "No";
+        }
+
+        function midFight(){
+             img.src="images/mid.jpg";
+             p1.innerHTML = "You cut off all its heads and turn around boasting. You here a loud skreech and when you turn  you are faced with a 6 headed beast. You relize that when you cut off a head it grows two more.";
+             p2.innerHTML = "Do you go for the hydra's heart?";
+             b1.innerHTML = "Yes";
+             b2.innerHTML = "No";
+        }
+
+        function end(){
+             img.src="images/vault.jpg";
+             p1.innerHTML = "You defeat the Hydra and it slowly dissolves into the third key. You use the three keys to unlock the door ahead and you VR Headset unlocks you are free";
+             p2.innerHTML = "";
              b1.innerHTML = "Yes";
              b2.innerHTML = "No";
         }
@@ -141,21 +173,79 @@
         function bclick(button){
             if (state == "intro"){
                 if(button == 1){
-                    stayInSchool();
-                    state="stayInSchool"
+                    parzival();
+                    state="parzival"
                 }
             else if(state == "intro"){
                 if (button == 2)
-                    goToCamp();
-                    state = "goToCamp"
+                    death();
+                    state = "death"
                 }
             }
-            else if(state == "stayInSchool"){   
+            else if(state == "parzival"){   
                 if (button == 1){
-                    escape();
-                    state = "escape"
+                    firstKey();
+                    state = "firstKey"
                 }
             }
+            else if(state == "firstKey"){
+                if (button == 1){
+                killedMonster();
+                state = "killedMonster"
+                }
+            }
+            else if(state == "killedMonster"){
+                if (button == 1){
+                lavaHydra();
+                state = "lavaHydra"
+                }
+            }
+            else if(state == "lavaHydra"){
+                if (button == 1){
+                midFight();
+                state = "midFight"
+                }
+            }
+            else if(state == "midFight"){
+                if (button == 1){
+                end();
+                state = "end"
+                }
+            }
+            else if(state == "parzival"){   
+                if (button == 2){
+                death();
+                state = "death"
+                }
+            }
+            else if(state == "firstKey"){
+                if (button == 2){
+                death();
+                state = "death"
+                }
+            }
+            else if(state == "killedMonster"){
+                if (button == 2){
+                death();
+                state = "death"
+                }
+            }
+            else if(state == "lavaHydra"){
+                if (button == 2){
+                death();
+                state = "death"
+                }
+            }
+            else if(state == "midFight"){
+                if (button == 2){
+                death();
+                state = "death"
+                }
+            }
+            if (button == 2){
+                death();
+                state = "death"
+                }
         }
 
     </script>
