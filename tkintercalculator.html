@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+        <link rel="stylesheet" type="text/css" href="css/navbar.css" />
+    </head>
+    <body>
+
+    <ul class="navbar">
+            <li><a href="home.html">Home</a></il>
+            <li class="active"><a href="resume.html">Resume</a></il>
+            <li class="active"><a href="contactme.html">Contact Me</a></il>
+            <li><a href="aboutme.html">About Me</a></il>
+            <li class="dropdown">
+                <a href="#">Projects</a>
+                <ul class="dropdown-content">
+                    <li><a href="textadventure.html">Text Adventure</a></li>
+                    <li><a href="pythonadventure.html">Python Text Adventure</a></li>
+                    <li><a href="tkintercalculator.html">Tkinter Calculator</a></li>
+                    <li><a href="#">Project 4</a></li>
+                    <li><a href="#">Project 5</a></li>
+                </ul>
+            </il>
+        </ul>
+        <h1>Tkinter Calculator</h1>
+        <iframe height="400px" width="100%" src="https://repl.it/@CollinLombardel/Calculator?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+        <h1>Written Response</h1>
+        <h1 style="font-size:15px;">3a.</h1>
+        <p>The overall purpose of the program is a calculator which is able to solve simple addition, subtraction, multiplication equations and save them to a list. The video describes a simple addition, subtraction, multiplication equations and the inputs required to find the answer and clear the workspace. To create an error free equation you must choose one number and between another number an addition, subtraction, or multiplication sign then click on the equals button. This will result in the calculation of your equation and the answer will present itself on the same box you typed your equation in.</p>
+        <p></p>
+        <h1 style="font-size:15px;">3b.</h1>
+        <table border='4' style="font-size:30px;">
+            <tr>
+                <th><img src="images/savetoFile.png"></th>
+                <th><img src="images/opentofile.png"></th>
+                <th><img src="images/fileopen.png"></th>
+            </tr>
+            <tr>
+                <th>There is a dropdown button in the menu tab labeled file, which drops down to a save button. Which saves the equation as a list to a file labeled “savedequations.txt”.</th>
+                <th>In the same dropdown menu there is another button which states open, which allows you to access the list that you saved to “savedequations.txt”.</th>
+                <th>This line of code identifies the specific file in which the list will be saved to.</th>
+            </tr>
+        </table>
+        <p>The data contained in the list are past equations or answers the user decided to save to the file “savedequations.txt”. If something is wrong with the input an error message will occur which will make saving it to the list will be unavailable until the equation is fixed.</p>
+        <h1>Demonstration Video</h1>
+        <iframe src="https://drive.google.com/file/d/1nRF8JPvcv9wmvWP6QB4PHNp-BjndOusB/preview" width="640" height="480"></iframe>
+    </body>
+</html>
